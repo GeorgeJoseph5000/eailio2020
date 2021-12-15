@@ -1,0 +1,65 @@
+<script src="https://www.gstatic.com/firebasejs/7.15.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.15.1/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.15.1/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.15.1/firebase-functions.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.15.1/firebase-storage.js"></script>
+    <script src="js/libraries/firebase.js"></script>
+
+
+    <form method="POST" id="form">
+        <input placeholder="first" type="text" name="first" />
+
+        <input placeholder="last" type="text" name="last" />
+
+        <input placeholder="country" type="text" name="country" />
+
+        <input placeholder="city" type="text" name="city" />
+
+        <input placeholder="gender" type="text" name="gender" />
+
+        <input placeholder="work" type="text" name="work" />
+
+        <input type="submit" value="Submit" />
+        
+    </form>
+
+
+    <form method="POST" id="form2">
+        <input placeholder="except1" type="text" name="except1" />
+
+        <input placeholder="except2" type="text" name="except2" />
+        <input type="submit" value="Submit" />
+    </form>
+
+    <script>
+        var form = document.querySelector("#form");
+        form.addEventListener("submit", (e)=>{
+            e.preventDefault();
+            const first = form['first'].value;
+            const last = form['last'].value;
+            const country = form['country'].value;
+            const city = form['city'].value;
+            const gender = form['gender'].value;
+            const work = form['work'].value;
+            db.collection("users").add({
+                first: first,
+                last: last,
+                country: country,
+                city: city,
+                gender: gender,
+                work: work,
+                avatar:""
+                
+            }).catch(err =>{
+                console.log(err);
+                return;
+            }).then(e=>{
+                form['first'].value = "";
+            form['last'].value = "";
+             form['country'].value = "";
+             form['city'].value = "";
+             form['gender'].value = "";
+            form['work'].value = "";
+            });
+        });
+    </script>

@@ -1,0 +1,221 @@
+*{
+    color: white;
+}
+footer{
+    text-align: center;
+    background: #8d003d;
+    width: 100%;
+    color: #fff;
+    position: fixed;
+    bottom: 0;
+    padding: 2px;
+}
+footer a{
+    color: rgba(255,255,255,.5);
+}
+footer a:visited{
+    color: #cccfc4;
+}
+footer a:hover{
+    color: #cccfc4;
+}
+
+
+.container{
+    margin-top: 70px;
+    margin-bottom: 70px;
+
+}
+#body{
+    background: #610049;
+    
+}
+#navBar{
+    background: #8d003d;
+    opacity: 0.8;
+}
+
+#dropdown{
+    background: #8d003d;
+    opacity: 0.8;
+    border: 0;
+    
+}
+#dropdown-item{
+    color: white;
+}
+#dropdown-item:hover{
+    color: black;
+}
+
+#registerForm{
+    width: 100%;
+}
+
+.widget{
+    width: 100%;
+    border-radius: 10px;
+    border-width: 3px;
+    border-style: solid;
+    margin-top: 10px;
+}
+.widget-header{
+    width: 100%;
+    background-color: tomato;
+    border-radius: 6px;
+    text-align: center;
+    font-size: 30px;
+    padding: 4px;
+}
+.widget-body{
+    padding: 5px;
+    background-color: #4a0023;
+}
+.widget-intro{
+    font-size: 25px;
+    color: tomato;
+    display: inline-block;
+    width: 48%;
+}
+.widget-detail{
+    display: inline-block;
+    width: 48%;
+    font-size: 15px;
+}
+
+.friendRow div{
+    display: inline-block;
+    margin: auto;
+}
+.friendRow{
+    background-color: tomato;
+    padding: 10px;
+    border-radius: 10px;
+    margin: 10px;
+}
+
+.lds-roller {
+  display: inline-block;
+  position: relative;
+  width: 40px;
+  height: 40px;
+}
+.lds-roller div {
+  animation: lds-roller 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+  transform-origin: 40px 40px;
+}
+.lds-roller div:after {
+  content: " ";
+  display: block;
+  position: absolute;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #fff;
+  margin: -4px 0 0 -4px;
+}
+.lds-roller div:nth-child(1) {
+  animation-delay: -0.036s;
+}
+.lds-roller div:nth-child(1):after {
+  top: 63px;
+  left: 63px;
+}
+.lds-roller div:nth-child(2) {
+  animation-delay: -0.072s;
+}
+.lds-roller div:nth-child(2):after {
+  top: 68px;
+  left: 56px;
+}
+.lds-roller div:nth-child(3) {
+  animation-delay: -0.108s;
+}
+.lds-roller div:nth-child(3):after {
+  top: 71px;
+  left: 48px;
+}
+.lds-roller div:nth-child(4) {
+  animation-delay: -0.144s;
+}
+.lds-roller div:nth-child(4):after {
+  top: 72px;
+  left: 40px;
+}
+.lds-roller div:nth-child(5) {
+  animation-delay: -0.18s;
+}
+.lds-roller div:nth-child(5):after {
+  top: 71px;
+  left: 32px;
+}
+.lds-roller div:nth-child(6) {
+  animation-delay: -0.216s;
+}
+.lds-roller div:nth-child(6):after {
+  top: 68px;
+  left: 24px;
+}
+.lds-roller div:nth-child(7) {
+  animation-delay: -0.252s;
+}
+.lds-roller div:nth-child(7):after {
+  top: 63px;
+  left: 17px;
+}
+.lds-roller div:nth-child(8) {
+  animation-delay: -0.288s;
+}
+.lds-roller div:nth-child(8):after {
+  top: 56px;
+  left: 12px;
+}
+@keyframes lds-roller {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+* {box-sizing: border-box}
+
+/* Container needed to position the overlay. Adjust the width as needed */
+.c {
+  position: relative;
+  width: 100%;
+  max-width: 300px;
+}
+
+/* Make the image to responsive */
+.image {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+/* The overlay effect - lays on top of the container and over the image */
+.overlay {
+  position: absolute;
+  bottom: 0;
+  background: rgb(0, 0, 0);
+  background: rgba(0, 0, 0, 0.5); /* Black see-through */
+  color: #f1f1f1;
+  width: 100%;
+  transition: .5s ease;
+  opacity:0;
+  color: white;
+  font-size: 20px;
+  padding: 20px;
+  text-align: center;
+}
+
+/* When you mouse over the container, fade in the overlay title */
+#imgCont:hover .overlay {
+  opacity: 1;
+}
+
+#modal-content{
+  background-color: rgb(93, 0, 0);
+}
